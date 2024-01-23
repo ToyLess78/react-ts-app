@@ -1,6 +1,8 @@
-import Navigation from './components/Header/Navigation/Navigation.tsx';
-import Footer from './components/Footer/Footer.tsx';
-import Main from './components/Main/Main.tsx';
+// import Navigation from './components/Header/Navigation/Navigation.tsx';
+// import Footer from './components/Footer/Footer.tsx';
+// import MainPage from './components/MainPage/MainPage.tsx';
+// import {RouterProvider} from 'react-router-dom';
+
 // import jsonData from './assets/data.json';
 // interface MyData {
 //     id: string;
@@ -17,23 +19,15 @@ import Main from './components/Main/Main.tsx';
 //     : [{ key: jsonData.id, value: jsonData }];
 
 
+import Main from './components/Main/Main.tsx';
+
 function App() {
 
   return (
     <>
-      <header className='header'>
-          <div className='header__inner'>
-              <a data-test-id="header-logo" href="/" className="header__logo">
-                  Travel App
-              </a>
-              <Navigation />
-          </div>
-      </header>
         <Main>
-            {/* Content specific to the main section */}
-            <p>Welcome to the Travel App!</p>
+            <h1>Text</h1>
         </Main>
-        <Footer />
     </>
   )
 }
