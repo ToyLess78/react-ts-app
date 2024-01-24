@@ -1,10 +1,5 @@
 import React from 'react';
-
-interface SelectFilterProps {
-    dataTestId: string;
-    name: string;
-    options: { value: string; label: string }[];
-}
+import {SelectFilterProps} from "../../helpers/interfases.ts";
 
 const SelectFilter: React.FC<SelectFilterProps> = ({ dataTestId, name, options }) => {
     return (

@@ -1,8 +1,5 @@
-import React, {ReactNode} from 'react';
-
-interface MainProps {
-    children: ReactNode;
-}
+import React from 'react';
+import {MainProps} from "../../helpers/interfases.ts";
 
 const Main: React.FC<MainProps> = ({ children }) => {
     return (

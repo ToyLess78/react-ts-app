@@ -1,12 +1,9 @@
 import Footer from "../Footer/Footer";
 import Header from '../Header/Header/Header.tsx';
-import React, {ReactNode} from "react";
+import React from "react";
 import Main from "../Main/Main.tsx";
 import {Outlet} from "react-router-dom";
-
-interface LayoutProps {
-    children?: ReactNode;
-}
+import {LayoutProps} from "../../helpers/interfases.ts";
 
 const Layout: React.FC<LayoutProps> = () => {
   return (

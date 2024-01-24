@@ -1,9 +1,6 @@
 import React from 'react';
+import {DurationFilterProps} from "../../helpers/interfases.ts";
 
-interface DurationFilterProps {
-    dataTestId: string;
-    name: string;
-}
 
 const DurationFilter: React.FC<DurationFilterProps> = ({ dataTestId, name }) => {
     const durationOptions = [

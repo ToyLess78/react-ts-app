@@ -3,7 +3,7 @@
 // import MainPage from './components/MainPage/MainPage.tsx';
 // import {RouterProvider} from 'react-router-dom';
 
-// import jsonData from './assets/data.json';
+// import tripsData from './assets/trips.json';
 // interface MyData {
 //     id: string;
 //     title: string;

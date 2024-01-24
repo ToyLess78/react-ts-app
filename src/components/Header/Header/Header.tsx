@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from '../Navigation/Navigation.tsx';
 import {NavLink} from "react-router-dom";
+import RenderNavigation from "../RenderNavigation/RenderNavigation.tsx";
 
 const Header: React.FC = () => {
     return (
@@ -9,7 +9,8 @@ const Header: React.FC = () => {
                 <NavLink to='/' data-test-id="header-logo" className="header__logo">
                     Travel App
                 </NavLink>
-                <Navigation />
+                <RenderNavigation />
+
             </div>
         </header>
     );

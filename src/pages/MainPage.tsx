@@ -1,8 +1,10 @@
-import TripsFilter from "../components/TripsFilter/TripsFilter.tsx";
+
+import TripsContainer from "../components/TripsContainer/TripsContainer.tsx";
 
 const MainPage = () => {
+
     return (<>
-            <TripsFilter />
+        <TripsContainer />
     </>)
 }
 
