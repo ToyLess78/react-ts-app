@@ -1,4 +1,6 @@
 import React from 'react';
+import SearchInput from "../SearchInput/SearchInput.tsx";
+import FilterSelect from "../FilterSelect/FilterSelect.tsx";
 
 interface FilterFormProps {
     state: {
@@ -16,45 +18,42 @@ const FilterForm: React.FC<FilterFormProps> = ({ state, dispatch }) => {
 
     return (
         <form className="trips-filter__form" autoComplete="off">
-            <label className="trips-filter__search input">
-                <span className="visually-hidden">Search by name</span>
-                <input
-                    data-test-id="filter-search"
-                    name="search"
-                    type="search"
-                    placeholder="search by title"
-                    value={state.search}
-                    onChange={handleInputChange}
-                />
-            </label>
-            <label className="select">
-                <span className="visually-hidden">Search by duration</span>
-                <select
-                    data-test-id="filter-duration"
-                    name="duration"
-                    value={state.duration.toString()}
-                    onChange={handleInputChange}
-                >
-                    <option value="">duration</option>
-                    <option value="0_x_5">{'< 5 days'}</option>
-                    <option value="5_x_10">{'< 10 days'}</option>
-                    <option value="< 10 days">{'≥ 10 days'}</option>
-                </select>
-            </label>
-            <label className="select">
-                <span className="visually-hidden">Search by level</span>
-                <select
-                    data-test-id="filter-level"
-                    name="level"
-                    value={state.level}
-                    onChange={handleInputChange}
-                >
-                    <option value="">level</option>
-                    <option value="easy">easy</option>
-                    <option value="moderate">moderate</option>
-                    <option value="difficult">difficult</option>
-                </select>
-            </label>
+            <SearchInput
+                label="Search by name"
+                dataTestId="filter-search"
+                name="search"
+                type="search"
+                placeholder="search by title"
+                value={state.search}
+                onChange={handleInputChange}
+            />
+            <FilterSelect
+                label="Search by duration"
+                dataTestId="filter-duration"
+                name="duration"
+                value={state.duration}
+                options={[
+                    { value: '', label: 'duration' },
+                    { value: '0_x_5', label: '< 5 days' },
+                    { value: '5_x_10', label: '< 10 days' },
+                    { value: '< 10 days', label: '≥ 10 days' },
+                ]}
+                onChange={handleInputChange}
+            />
+
+            <FilterSelect
+                label="Search by level"
+                dataTestId="filter-level"
+                name="level"
+                value={state.level}
+                options={[
+                    { value: '', label: 'level' },
+                    { value: 'easy', label: 'easy' },
+                    { value: 'moderate', label: 'moderate' },
+                    { value: 'difficult', label: 'difficult' },
+                ]}
+                onChange={handleInputChange}
+            />
         </form>
     );
 };

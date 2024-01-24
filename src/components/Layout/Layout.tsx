@@ -5,6 +5,7 @@ import Main from "../Main/Main.tsx";
 import {Outlet} from "react-router-dom";
 import {LayoutProps} from "../../helpers/interfases.ts";
 
+
 const Layout: React.FC<LayoutProps> = () => {
   return (
       <>

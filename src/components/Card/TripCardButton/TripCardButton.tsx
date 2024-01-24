@@ -1,11 +1,13 @@
 import React from 'react';
-import Button from "../../Button/Button.tsx";
 
-const TripCardButton: React.FC = () => {
+interface TripButtonProps {
+    onClick: () => void;
+}
+const TripCardButton: React.FC<TripButtonProps> = ({ onClick }) => {
     return (
-        <Button dataTestId="trip-card-link" to="./t" className="">
-            Discover a trip
-        </Button>
+        <button data-test-id="trip-details-button" className="trip__button button" onClick={onClick}>
+            Book a trip
+        </button>
     );
 };
 

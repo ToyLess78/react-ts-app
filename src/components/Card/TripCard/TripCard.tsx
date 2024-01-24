@@ -1,4 +1,7 @@
 import React from 'react';
+import Button from "../../Button/Button.tsx";
+import TripInfo from "../TripInfo/TripInfo.tsx";
+import TripPrice from "../TripPrice/TripPrice.tsx";
 
 interface TripCardProps {
     trip: {
@@ -20,29 +23,12 @@ const TripCard: React.FC<TripCardProps> = ({ trip }) => {
         <li data-test-id="trip-card" className="trip-card">
             <img data-test-id="trip-card-image" src={image} alt={`${title} photo`} />
             <div className="trip-card__content">
-                <div className="trip-info">
-                    <h3 data-test-id="trip-card-title" className="trip-info__title">
-                        {title}
-                    </h3>
-                    <div className="trip-info__content">
-            <span data-test-id="trip-card-duration" className="trip-info__duration">
-              <strong>{duration}</strong> days
-            </span>
-                        <span data-test-id="trip-card-level" className="trip-info__level">
-              {level}
-            </span>
-                    </div>
-                </div>
-                <div className="trip-price">
-                    <span>Price</span>
-                    <strong data-test-id="trip-card-price-value" className="trip-price__value">
-                        ${price}
-                    </strong>
-                </div>
+                <TripInfo title={title} duration={duration} level={level} />
+                <TripPrice price={price} />
             </div>
-            <a data-test-id="trip-card-link" href={`./trip/${trip.id}`} className="button">
+            <Button dataTestId="trip-card-link" to={`/trip/${trip.id}`} className="button">
                 Discover a trip
-            </a>
+            </Button>
         </li>
     );
 };
