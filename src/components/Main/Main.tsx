@@ -10,6 +10,10 @@ const Main: React.FC<MainProps> = ({ children }) => {
         switch (location.pathname) {
             case '/bookings' : i = 'bookings-page'
                 break
+            case '/sign-up' : i = 'sign-up-page'
+                break
+            case '/sign-in' : i = 'sign-in-page'
+                break
             case `/trip/${tripId}`: i = 'trip-page'
                 break
             default: i = ''
